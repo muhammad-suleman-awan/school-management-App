@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container"><br>
+ <mat-drawer-container class="example-container"><br>
     <mat-drawer mode="side" opened>
 
       <mat-list role="list">
@@ -6,8 +6,8 @@
           <button mat-raised-button color="primary">Dashbaord</button>
         </mat-list-item>
 
-        <mat-list-item role="registerform">
-          <button mat-raised-button color="primary">Registation Form</button>
+        <mat-list-item routerLink="/register" role="registerform">
+          <button mat-raised-button color="primary">Registration Form</button>
         </mat-list-item>
 
         <mat-list-item role="listitem">
@@ -15,11 +15,11 @@
         </mat-list-item>
         
       </mat-list>
-    
-    
-    
+  
     </mat-drawer> 
     <br>
-    <mat-drawer-content>Main content</mat-drawer-content>
   </mat-drawer-container>
   
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

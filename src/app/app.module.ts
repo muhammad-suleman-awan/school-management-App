@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,15 +14,21 @@ import {MatButtonModule} from '@angular/material/button';
 
 import {MatIconModule} from '@angular/material/icon';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
+import { RegistrationformComponent } from './registrationform/registrationform.component';
+import { Routes, RouterModule } from '@angular/router';
 
 
+const routes: Routes =[
+  {path:'registrationform', component: RegistrationformComponent}
+];
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationbarComponent
+    NavigationbarComponent,
+    RegistrationformComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,7 @@ import { NavigationbarComponent } from './navigationbar/navigationbar.component'
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
+    RouterModule.forRoot(routes)
 
   ],
   providers: [],
