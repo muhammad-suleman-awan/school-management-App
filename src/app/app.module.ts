@@ -1,7 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -17,6 +16,9 @@ import { NavigationbarComponent } from './navigationbar/navigationbar.component'
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { Routes, RouterModule } from '@angular/router';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HttpRequest } from '@angular/common/http';
 
 
 const routes: Routes =[
@@ -34,9 +36,17 @@ const routes: Routes =[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    
 
     MatFormFieldModule,
+
+
+
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
+
 
 
     MatButtonModule,
@@ -44,8 +54,12 @@ const routes: Routes =[
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    RouterModule.forRoot(routes)
 
+
+
+
+    RouterModule.forRoot(routes)
+   
 
 
 
