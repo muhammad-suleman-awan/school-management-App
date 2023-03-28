@@ -16,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { Routes, RouterModule } from '@angular/router';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 const routes: Routes =[
@@ -35,6 +36,8 @@ const routes: Routes =[
     AppRoutingModule,
     BrowserAnimationsModule,
 
+    MatFormFieldModule,
+
 
     MatButtonModule,
     MatListModule,
@@ -42,6 +45,11 @@ const routes: Routes =[
     MatIconModule,
     MatToolbarModule,
     RouterModule.forRoot(routes)
+
+
+
+
+
 
   ],
   providers: [],
